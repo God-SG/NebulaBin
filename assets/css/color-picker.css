@@ -1,0 +1,264 @@
+/* Color Picker Styles */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+  max-width: 300px;
+}
+
+.color-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.color-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.color-swatch {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.color-option input[type="radio"]:checked + .color-swatch {
+  border-color: #4a9eff;
+  box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.color-remove {
+  background: linear-gradient(45deg, transparent 30%, #ff4444 30%, #ff4444 70%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, #ff4444 30%, #ff4444 70%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.color-preview {
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+/* Premium Badge Styles */
+.premium-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, #4a9eff, #6b73ff);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.staff-badge {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+}
+
+.premium-required {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.premium-required span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a9eff;
+  margin-bottom: 10px;
+}
+
+.premium-required p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Staff Notice */
+.staff-notice {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.staff-notice h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.staff-notice ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.staff-notice li {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Upgrade Cards */
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.upgrade-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.upgrade-card:hover {
+  transform: translateY(-5px);
+}
+
+.vip-card {
+  border-color: #4a9eff;
+}
+.criminal-card {
+  border-color: #ff4444;
+}
+.rich-card {
+  border-color: #ffd700;
+}
+.color-card {
+  border-color: #ff44aa;
+}
+
+.upgrade-header h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.upgrade-price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.vip-card .upgrade-price {
+  color: #4a9eff;
+}
+.criminal-card .upgrade-price {
+  color: #ff4444;
+}
+.rich-card .upgrade-price {
+  color: #ffd700;
+}
+.color-card .upgrade-price {
+  color: #ff44aa;
+}
+
+.upgrade-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.upgrade-features li {
+  margin: 8px 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.upgrade-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vip-btn {
+  background: #4a9eff;
+  color: white;
+}
+.criminal-btn {
+  background: #ff4444;
+  color: white;
+}
+.rich-btn {
+  background: #ffd700;
+  color: black;
+}
+.color-btn {
+  background: #ff44aa;
+  color: white;
+}
+
+.upgrade-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.upgrade-owned {
+  background: #44ff44;
+  color: #000;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.upgrade-info {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.upgrade-info h3,
+.upgrade-info h4 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.upgrade-info p,
+.upgrade-info li {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info ol {
+  color: #ccc;
+  padding-left: 20px;
+}
+
+.contact-info li {
+  margin: 8px 0;
+}
